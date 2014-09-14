@@ -4,3 +4,6 @@
   gather_facts: True
   roles:
     - set_localtime
+    - set_disablelinux
+    - yum_updateall
+    - yum_commonpackages

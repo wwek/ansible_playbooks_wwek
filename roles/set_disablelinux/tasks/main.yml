@@ -1,0 +1,5 @@
+ - name: yum install libselinux-python
+   yum: name=libselinux-python state=latest
+   when: ansible_os_family == "RedHat" and ansible_distribution_version|int >=6
+ - name: Disable Selinux
+   selinux: state=disabled
